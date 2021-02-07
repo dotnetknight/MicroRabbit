@@ -109,7 +109,7 @@ namespace MicroRabbit.Infrastructure.Bus
             }
             catch (Exception ex)
             {
-
+                throw new Exception(ex.Message);
             }
         }
 
