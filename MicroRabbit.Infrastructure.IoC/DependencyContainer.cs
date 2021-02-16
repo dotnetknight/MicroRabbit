@@ -8,6 +8,7 @@ using MicroRabbit.Banking.Domain.Commands;
 using MicroRabbit.Banking.Domain.Interfaces;
 using MicroRabbit.Domain.Core.Bus;
 using MicroRabbit.Infrastructure.Bus;
+using MicroRabbit.Transfer.Data.Context;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MicroRabbit.Infrastructure.IoC
@@ -28,6 +29,7 @@ namespace MicroRabbit.Infrastructure.IoC
             //Data
             services.AddTransient<IAccountRepository, AccountRepository>();
             services.AddTransient<BankingDbContext>();
+            services.AddTransient<TransferDbContext>();
         }
     }
 }
